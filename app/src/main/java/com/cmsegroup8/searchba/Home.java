@@ -43,7 +43,7 @@ public class Home extends AppCompatActivity {
 
     if(id == R.id.navigation_home) {
 
-            Intent starttree1 = new Intent(this, Tree1.class);
+            Intent starttree1 = new Intent(this, Home.class);
             startActivity(starttree1);
 
         }

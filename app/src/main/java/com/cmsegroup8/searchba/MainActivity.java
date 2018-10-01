@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     List<String> suggestList = new ArrayList<>();
     Database database;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
+
+
             @Override
             public void onSearchConfirmed(CharSequence text) {
                 startSearch(text.toString());
@@ -85,11 +89,49 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onButtonClicked(int buttonCode) {
 
+                int id = item.getItemId();
+
+                if(id == R.id.) {
+
+                    Intent startsearch = new Intent(this, Tree1.class);
+                    startActivity(startsearch);
+
+                }
+
             }
         });
 
         adapter = new SearchAdapter(this,database.getTrees());
         recyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.navigation, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        if(id == R.id.navigation_Search) {
+
+            Intent startsearch = new Intent(this, MainActivity.class);
+            startActivity(startsearch);
+
+        }
+
+        if(id == R.id.navigation_home) {
+
+            Intent starttree1 = new Intent(this, Home.class);
+            startActivity(starttree1);
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void startSearch(String text) {
