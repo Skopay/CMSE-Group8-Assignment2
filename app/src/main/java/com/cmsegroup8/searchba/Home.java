@@ -1,6 +1,8 @@
 package com.cmsegroup8.searchba;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -19,6 +21,29 @@ public class Home extends AppCompatActivity {
 
         int imageResource = getResources().getIdentifier("@drawable/dailydeals", null, this.getPackageName());
         deals.setImageResource(imageResource);
+
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                switch (menuItem.getItemId()){
+
+                case R.id.navigation_home:
+                    Intent home = new Intent(Home.this, Home.class);
+                    startActivity(home);
+                    break;
+
+                case R.id.navigation_Search:
+                    Intent search = new Intent(Home.this, MainActivity.class);
+                    startActivity(search);
+                    break;
+
+            }
+                return false;
+            }
+        });
     }
 
     @Override
@@ -43,8 +68,8 @@ public class Home extends AppCompatActivity {
 
     if(id == R.id.navigation_home) {
 
-            Intent starttree1 = new Intent(this, Home.class);
-            startActivity(starttree1);
+            Intent home = new Intent(this, Home.class);
+            startActivity(home);
 
         }
         return super.onOptionsItemSelected(item);

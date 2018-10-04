@@ -1,6 +1,8 @@
 package com.cmsegroup8.searchba;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -34,6 +36,29 @@ public class Tree1 extends AppCompatActivity {
         TextView feature = (TextView) findViewById(R.id.features);
 
         feature.setText("List palm features here");
+
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                switch (menuItem.getItemId()){
+
+                    case R.id.navigation_home:
+                        Intent home = new Intent(Tree1.this, Home.class);
+                        startActivity(home);
+                        break;
+
+                    case R.id.navigation_Search:
+                        Intent search = new Intent(Tree1.this, MainActivity.class);
+                        startActivity(search);
+                        break;
+
+                }
+                return false;
+            }
+        });
     }
 
     @Override
