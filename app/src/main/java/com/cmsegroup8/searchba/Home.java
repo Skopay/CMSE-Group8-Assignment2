@@ -61,7 +61,7 @@ public class Home extends AppCompatActivity {
 
         if(id == R.id.navigation_Search) {
 
-        Intent startsearch = new Intent(this, MainActivity.class);
+        Intent startsearch = new Intent(this, Search.class);
         startActivity(startsearch);
 
         }

@@ -25,17 +25,19 @@ public class Tree1 extends AppCompatActivity {
         palmtree.setImageResource(imageResource);
 
         TextView info = (TextView) findViewById(R.id.info1);
-
-        info.setText("Palms are one of the best known and most widely planted tree families." +
-                " They have held an important role for humans throughout much of history." +
-                " Many common products and foods come from palms." +
-                " They are often used in parks and gardens that are in areas that do not have heavy frosts." +
-                "In the past palms were symbols of victory, peace, and fertility." +
-                " Today palms are a popular symbol for the tropics and for vacations.");
-
         TextView feature = (TextView) findViewById(R.id.features);
 
+        /*Intent incomingintent = getIntent();
+        String incominginfo = incomingintent.getStringExtra("Tree_Info");
+        info.setText(incominginfp);*/
+
         feature.setText("List palm features here");
+        info.setText("Palms are one of the best known and most widely planted tree families." +
+                 "They have held an important role for humans throughout much of history." +
+                 "Many common products and foods come from palms." +
+                 "They are often used in parks and gardens that are in areas that do not have heavy frosts." +
+                "In the past palms were symbols of victory, peace, and fertility." +
+                "Today palms are a popular symbol for the tropics and for vacations.");
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
 
