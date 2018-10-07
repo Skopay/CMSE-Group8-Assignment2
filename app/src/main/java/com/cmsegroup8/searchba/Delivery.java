@@ -1,6 +1,7 @@
 package com.cmsegroup8.searchba;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -48,7 +49,8 @@ public class Delivery extends AppCompatActivity {
                 if(firstName.isEmpty() | lastName.isEmpty()) {
                     showToast("Please enter your name.");
                 } else {
-                    showAlertDialog();
+                    Intent start_purchase = new Intent(Delivery.this, Payment.class);
+                    startActivity(start_purchase);
                 }
 
             }

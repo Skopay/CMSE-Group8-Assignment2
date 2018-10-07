@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,6 +19,16 @@ public class Tree1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tree1);
+
+        Button purch = findViewById(R.id.purchase);
+        purch.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View view){
+
+                Intent start_delivery = new Intent(Tree1.this, Delivery.class);
+                startActivity(start_delivery);
+            }
+        });
 
         ImageView palmtree;
         palmtree = (ImageView) findViewById(R.id.palmtree);
@@ -53,7 +65,7 @@ public class Tree1 extends AppCompatActivity {
                         break;
 
                     case R.id.navigation_Search:
-                        Intent search = new Intent(Tree1.this, MainActivity.class);
+                        Intent search = new Intent(Tree1.this, SearchFilter.class);
                         startActivity(search);
                         break;
 
@@ -61,6 +73,7 @@ public class Tree1 extends AppCompatActivity {
                 return false;
             }
         });
+
     }
 
     @Override
@@ -78,7 +91,7 @@ public class Tree1 extends AppCompatActivity {
 
         if(id == R.id.navigation_Search) {
 
-            Intent startsearch = new Intent(this, MainActivity.class);
+            Intent startsearch = new Intent(this, SearchFilter.class);
             startActivity(startsearch);
 
         }

@@ -36,7 +36,7 @@ public class Home extends AppCompatActivity {
                     break;
 
                 case R.id.navigation_Search:
-                    Intent search = new Intent(Home.this, MainActivity.class);
+                    Intent search = new Intent(Home.this, SearchFilter.class);
                     startActivity(search);
                     break;
 

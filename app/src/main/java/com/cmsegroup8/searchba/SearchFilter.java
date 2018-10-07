@@ -12,7 +12,6 @@ import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.ImageView;
 
 import com.cmsegroup8.searchba.Adapter.SearchAdapter;
 import com.cmsegroup8.searchba.Database.Database;
@@ -21,7 +20,7 @@ import com.mancj.materialsearchbar.MaterialSearchBar;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class SearchFilter extends AppCompatActivity {
 
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
@@ -45,12 +44,12 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()){
 
                     case R.id.navigation_home:
-                        Intent home = new Intent(MainActivity.this, Home.class);
+                        Intent home = new Intent(SearchFilter.this, Home.class);
                         startActivity(home);
                         break;
 
                     case R.id.navigation_Search:
-                        Intent search = new Intent(MainActivity.this, MainActivity.class);
+                        Intent search = new Intent(SearchFilter.this, SearchFilter.class);
                         startActivity(search);
                         break;
 
@@ -137,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(id == R.id.navigation_Search) {
 
-            Intent startsearch = new Intent(this, MainActivity.class);
+            Intent startsearch = new Intent(this, SearchFilter.class);
             startActivity(startsearch);
 
         }
