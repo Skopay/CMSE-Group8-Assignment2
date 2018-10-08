@@ -13,19 +13,23 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Tree1 extends AppCompatActivity {
+import com.cmsegroup8.searchba.Model.Trees;
+
+public class Palm_Tree extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tree1);
 
+        Trees trees = new Trees();
+
         Button purch = findViewById(R.id.purchase);
         purch.setOnClickListener(new View.OnClickListener(){
 
             public void onClick(View view){
 
-                Intent start_delivery = new Intent(Tree1.this, Delivery.class);
+                Intent start_delivery = new Intent(Palm_Tree.this, Delivery.class);
                 startActivity(start_delivery);
             }
         });
@@ -43,7 +47,7 @@ public class Tree1 extends AppCompatActivity {
         String incominginfo = incomingintent.getStringExtra("Tree_Info");
         info.setText(incominginfp);*/
 
-        feature.setText("List palm features here");
+        feature.setText("Features");
         info.setText("Palms are one of the best known and most widely planted tree families." +
                  "They have held an important role for humans throughout much of history." +
                  "Many common products and foods come from palms." +
@@ -60,12 +64,12 @@ public class Tree1 extends AppCompatActivity {
                 switch (menuItem.getItemId()){
 
                     case R.id.navigation_home:
-                        Intent home = new Intent(Tree1.this, Home.class);
+                        Intent home = new Intent(Palm_Tree.this, Home.class);
                         startActivity(home);
                         break;
 
                     case R.id.navigation_Search:
-                        Intent search = new Intent(Tree1.this, SearchFilter.class);
+                        Intent search = new Intent(Palm_Tree.this, SearchFilter.class);
                         startActivity(search);
                         break;
 

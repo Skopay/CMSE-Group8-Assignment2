@@ -27,8 +27,8 @@ public class Search extends AppCompatActivity {
 
         final ArrayList<String> trees = new ArrayList<>();
         trees.add("Palm");
-        trees.add("Cherry");
-        trees.add("Tomato");
+        trees.add("Arborvitae");
+        trees.add("Butternut");
 
         adapter = new ArrayAdapter(this, R.layout.list_layout, trees);
         list.setAdapter(adapter);
@@ -37,20 +37,26 @@ public class Search extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                if(id == 0) {
-                    Intent starttree = new Intent(Search.this, Tree1.class);
+                if(position == 0) {
+                    Intent start_palm = new Intent(Search.this, Palm_Tree.class);
                     //starttree.putExtra("Tree_Info", trees.get(parent));
-                    startActivity(starttree);
+                    startActivity(start_palm);
                 }
-                else if(id == 1) {
-                    Intent starthome = new Intent(Search.this, Home.class);
+                else if(position == 1) {
+                    Intent start_Arborvitae = new Intent(Search.this, Arborvitae.class);
                     //starttree.putExtra("Tree_Info", trees.get(parent));
-                    startActivity(starthome);
+                    startActivity(start_Arborvitae);
+                }
+                else if(position == 2) {
+                    Intent start_Butternut = new Intent(Search.this, Butternut_Tree.class);
+                    //starttree.putExtra("Tree_Info", trees.get(parent));
+                    startActivity(start_Butternut);
                 }
 
             }
         });
 
+        /*
         editText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -68,6 +74,6 @@ public class Search extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
 
             }
-        });
+        });*/
     }
 }
