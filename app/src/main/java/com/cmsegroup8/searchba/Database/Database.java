@@ -26,7 +26,7 @@ public class Database extends SQLiteAssetHelper {
         SQLiteDatabase db = getReadableDatabase();
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
 
-        String[] sqlSelect = {"id", "name"};
+        String[] sqlSelect = {"id", "name", "price", "desc", "colour", "size"};
         String tableName = "trees";
 
         qb.setTables(tableName);
@@ -37,6 +37,10 @@ public class Database extends SQLiteAssetHelper {
                 Trees trees = new Trees();
                 trees.setId(c.getInt(c.getColumnIndex("id")));
                 trees.setName(c.getString(c.getColumnIndex("name")));
+                trees.setPrice(c.getString(c.getColumnIndex("price")));
+                trees.setDesc(c.getString(c.getColumnIndex("desc")));
+                trees.setColour(c.getString(c.getColumnIndex("colour")));
+                trees.setTreeSize(c.getString(c.getColumnIndex("size")));
 
                 result.add(trees);
             }while(c.moveToNext());
@@ -83,6 +87,7 @@ public class Database extends SQLiteAssetHelper {
         }
         return result;
     }
+    
 }
 
 
