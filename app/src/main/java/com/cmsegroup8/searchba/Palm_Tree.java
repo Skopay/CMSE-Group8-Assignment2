@@ -13,9 +13,13 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.cmsegroup8.searchba.Model.Trees;
 
 public class Palm_Tree extends AppCompatActivity {
+
+    static String quantity;
+    ElegantNumberButton quantityButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +82,13 @@ public class Palm_Tree extends AppCompatActivity {
             }
         });
 
+        quantityButton = findViewById(R.id.quantity_button);
+        quantityButton.setOnClickListener(new ElegantNumberButton.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                quantity = quantityButton.getNumber();
+            }
+        });
     }
 
     @Override

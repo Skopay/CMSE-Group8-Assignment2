@@ -20,7 +20,8 @@ public class Payment extends AppCompatActivity {
         TextView amount = findViewById(R.id.payment_amount);
         Button payButton = findViewById(R.id.btn_pay);
 
-        amount.setText("Order amount");
+        amount.setTextSize(16);
+        amount.setText("$" + Palm_Tree.quantity);
         payButton.setText("Pay Now");
 
         cardForm.setPayBtnClickListner(new OnPayBtnClickListner() {
