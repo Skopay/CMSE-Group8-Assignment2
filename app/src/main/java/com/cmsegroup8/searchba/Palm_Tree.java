@@ -29,6 +29,39 @@ public class Palm_Tree extends AppCompatActivity {
 
         Trees trees = new Trees();
 
+        ImageView palmtree = (ImageView) findViewById(R.id.palmtree);
+
+        int imageResource = getResources().getIdentifier("@drawable/palmtree", null, this.getPackageName());
+        palmtree.setImageResource(imageResource);
+
+        TextView facts = findViewById(R.id.Facts);
+        facts.setText("Facts");
+
+        TextView commonname = findViewById(R.id.common_name);
+        commonname.setText("Common Name: Palm");
+
+        TextView tree_info = (TextView) findViewById(R.id.Tree_info);
+        tree_info.setText("Palms are one of the best known and most widely planted tree families." +
+                "They have held an important role for humans throughout much of history." +
+                "Many common products and foods come from palms." +
+                "They are often used in parks and gardens that are in areas that do not have heavy frosts." +
+                "In the past palms were symbols of victory, peace, and fertility." +
+                "Today palms are a popular symbol for the tropics and for vacations.");
+
+        TextView price_title = (TextView) findViewById(R.id.Price_Title) ;
+        price_title.setText("Price");
+
+        TextView price = (TextView) findViewById(R.id.Price);
+        price.setText("$30.00 Each");
+
+        quantityButton = findViewById(R.id.quantity_button);
+        quantityButton.setOnClickListener(new ElegantNumberButton.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                quantity = quantityButton.getNumber();
+            }
+        });
+
         Button purch = findViewById(R.id.purchase);
         purch.setOnClickListener(new View.OnClickListener(){
 
@@ -39,25 +72,9 @@ public class Palm_Tree extends AppCompatActivity {
             }
         });
 
-        ImageView palmtree;
-        palmtree = (ImageView) findViewById(R.id.palmtree);
-
-        int imageResource = getResources().getIdentifier("@drawable/palmtree", null, this.getPackageName());
-        palmtree.setImageResource(imageResource);
-
-        TextView info = (TextView) findViewById(R.id.info1);
-        TextView feature = (TextView) findViewById(R.id.features);
-
         /*Intent incomingintent = getIntent();
         String incominginfo = incomingintent.getStringExtra("Tree_Info");
         info.setText(incominginfp);*/
-
-        info.setText("Palms are one of the best known and most widely planted tree families." +
-                 "They have held an important role for humans throughout much of history." +
-                 "Many common products and foods come from palms." +
-                 "They are often used in parks and gardens that are in areas that do not have heavy frosts." +
-                "In the past palms were symbols of victory, peace, and fertility." +
-                "Today palms are a popular symbol for the tropics and for vacations.");
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
 
@@ -82,13 +99,6 @@ public class Palm_Tree extends AppCompatActivity {
             }
         });
 
-        quantityButton = findViewById(R.id.quantity_button);
-        quantityButton.setOnClickListener(new ElegantNumberButton.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                quantity = quantityButton.getNumber();
-            }
-        });
     }
 
     @Override
