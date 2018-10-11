@@ -15,11 +15,11 @@ public class Arborvitae extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_arborvitae);
 
-        ImageView arbotree = (ImageView) findViewById(R.id.Arbo_tree);
-        TextView arboname = (TextView) findViewById(R.id.common_name);
-        TextView arboinfo = (TextView) findViewById(R.id.arbo_info);
+        ImageView arbotree = findViewById(R.id.Arbo_tree);
+        TextView arboname = findViewById(R.id.common_name);
+        TextView arboinfo = findViewById(R.id.arbo_info);
 
-        Button purchase = (Button) findViewById(R.id.purchase);
+        Button purchase = findViewById(R.id.purchase);
         purchase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

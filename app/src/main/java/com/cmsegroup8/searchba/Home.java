@@ -32,12 +32,12 @@ public class Home extends AppCompatActivity implements RatingDialogListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        ImageView deals = (ImageView) findViewById(R.id.dailydeals);
+        ImageView deals = findViewById(R.id.dailydeals);
 
         int imageResource = getResources().getIdentifier("@drawable/dailydeals", null, this.getPackageName());
         deals.setImageResource(imageResource);
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavView_Bar);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
