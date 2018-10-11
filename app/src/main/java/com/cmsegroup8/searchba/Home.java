@@ -18,13 +18,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.Toast;
-
 import com.stepstone.apprating.AppRatingDialog;
 import com.stepstone.apprating.listener.RatingDialogListener;
-
 import java.util.Arrays;
-
-import static android.view.WindowManager.*;
 
 public class Home extends AppCompatActivity implements RatingDialogListener {
 
@@ -73,7 +69,6 @@ public class Home extends AppCompatActivity implements RatingDialogListener {
                 showRatingDialog();
             }
         });
-
     }
 
     @Override
@@ -83,14 +78,6 @@ public class Home extends AppCompatActivity implements RatingDialogListener {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if(id == R.id.navigation_About) {
-        showAlertDialog();
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
     private void showRatingDialog() {
         new AppRatingDialog.Builder()
@@ -120,15 +107,4 @@ public class Home extends AppCompatActivity implements RatingDialogListener {
         //Nothing is done
     }
 
-    private void showAlertDialog() {
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-        alertDialog.setTitle("Developers\n" +
-                "Matthew Bigeni\n" +
-                "Hayden Parkinson\n" +
-                "Nick Winter\n" +
-                "William Conquest\n");
-        alertDialog.show();
-        alertDialog.getWindow().setLayout(600, 400);
-
-    }
 }

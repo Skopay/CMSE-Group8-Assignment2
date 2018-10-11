@@ -120,17 +120,13 @@ public class Palm_Tree extends AppCompatActivity {
         int id = item.getItemId();
 
         if(id == R.id.navigation_Search) {
-
             Intent startsearch = new Intent(this, SearchFilter.class);
             startActivity(startsearch);
-
         }
 
         if(id == R.id.navigation_home) {
-
             Intent starttree1 = new Intent(this, Home.class);
             startActivity(starttree1);
-
         }
         return super.onOptionsItemSelected(item);
     }
