@@ -1,16 +1,21 @@
 package com.cmsegroup8.searchba;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
@@ -18,6 +23,8 @@ import com.stepstone.apprating.AppRatingDialog;
 import com.stepstone.apprating.listener.RatingDialogListener;
 
 import java.util.Arrays;
+
+import static android.view.WindowManager.*;
 
 public class Home extends AppCompatActivity implements RatingDialogListener {
 
@@ -69,34 +76,21 @@ public class Home extends AppCompatActivity implements RatingDialogListener {
 
     }
 
-/*    @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.navigation, menu);
+        inflater.inflate(R.menu.misc, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         int id = item.getItemId();
-
-        if(id == R.id.navigation_Search) {
-
-        Intent startsearch = new Intent(this, Search.class);
-        startActivity(startsearch);
-
-        }
-
-    if(id == R.id.navigation_home) {
-
-            Intent home = new Intent(this, Home.class);
-            startActivity(home);
-
+        if(id == R.id.navigation_About) {
+        showAlertDialog();
         }
         return super.onOptionsItemSelected(item);
-    }*/
+    }
 
     private void showRatingDialog() {
         new AppRatingDialog.Builder()
@@ -124,5 +118,17 @@ public class Home extends AppCompatActivity implements RatingDialogListener {
 
     public void onNegativeButtonClicked() {
         //Nothing is done
+    }
+
+    private void showAlertDialog() {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
+        alertDialog.setTitle("Developers\n" +
+                "Matthew Bigeni\n" +
+                "Hayden Parkinson\n" +
+                "Nick Winter\n" +
+                "William Conquest\n");
+        alertDialog.show();
+        alertDialog.getWindow().setLayout(600, 400);
+
     }
 }

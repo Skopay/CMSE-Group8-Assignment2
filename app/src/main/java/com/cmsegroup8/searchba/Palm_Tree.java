@@ -78,7 +78,7 @@ public class Palm_Tree extends AppCompatActivity {
 
         /*Intent incomingintent = getIntent();
         String incominginfo = incomingintent.getStringExtra("Tree_Info");
-        info.setText(incominginfp);*/
+        info.setText(incominginfo);*/
 
         //BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
 
