@@ -37,6 +37,7 @@ public class Search extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+
                 if(position == 0) {
                     Intent start_palm = new Intent(Search.this, Palm_Tree.class);
                     //starttree.putExtra("Tree_Info", trees.get(parent));
@@ -53,9 +54,9 @@ public class Search extends AppCompatActivity {
                     startActivity(start_Butternut);
                 }
 
+
             }
         });
-
 
         editText.addTextChangedListener(new TextWatcher() {
             @Override
@@ -75,5 +76,7 @@ public class Search extends AppCompatActivity {
 
             }
         });
+
+
     }
 }

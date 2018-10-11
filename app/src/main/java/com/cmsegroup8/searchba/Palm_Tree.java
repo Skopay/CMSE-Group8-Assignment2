@@ -22,6 +22,10 @@ public class Palm_Tree extends AppCompatActivity {
     ElegantNumberButton quantityButton;
     double price = 30.00;
 
+    static String palm = "Palm";
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,6 +104,7 @@ public class Palm_Tree extends AppCompatActivity {
         });
 */
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
