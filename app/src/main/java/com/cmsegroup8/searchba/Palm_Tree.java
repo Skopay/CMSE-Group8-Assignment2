@@ -76,9 +76,9 @@ public class Palm_Tree extends AppCompatActivity {
         String incominginfo = incomingintent.getStringExtra("Tree_Info");
         info.setText(incominginfp);*/
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
+        //BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        /*bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
@@ -98,7 +98,7 @@ public class Palm_Tree extends AppCompatActivity {
                 return false;
             }
         });
-
+*/
     }
 
     @Override

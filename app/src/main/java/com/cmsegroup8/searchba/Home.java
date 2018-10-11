@@ -48,7 +48,7 @@ public class Home extends AppCompatActivity implements RatingDialogListener {
                     break;
 
                 case R.id.navigation_Search:
-                    Intent search = new Intent(Home.this, SearchFilter.class);
+                    Intent search = new Intent(Home.this, Search.class);
                     startActivity(search);
                     break;
 
@@ -69,7 +69,7 @@ public class Home extends AppCompatActivity implements RatingDialogListener {
 
     }
 
-    @Override
+/*    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
         MenuInflater inflater = getMenuInflater();
@@ -96,7 +96,7 @@ public class Home extends AppCompatActivity implements RatingDialogListener {
 
         }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
     private void showRatingDialog() {
         new AppRatingDialog.Builder()
