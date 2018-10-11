@@ -8,29 +8,18 @@
     tools:context=".HomeScreen"
     tools:layout_editor_absoluteY="81dp">
 
-    <ImageView
-        android:id="@+id/dailydeals"
-        android:layout_width="370dp"
-        android:layout_height="178dp"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="58dp"
-        app:srcCompat="@android:color/background_dark" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/rating_button"
-        android:src="@drawable/ic_star_black_24dp"
-        android:backgroundTint="@android:color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:elevation="6dp"
-        app:pressedTranslationZ="12dp"
-        app:useCompatPadding="true"
-        />
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/dailydeals"
+            android:layout_width="match_parent"
+            android:layout_height="178dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="58dp"
+            app:srcCompat="@android:color/background_dark" />
 
         <TextView
             android:id="@+id/rate_label"
@@ -44,13 +33,23 @@
 
         <RatingBar
             android:id="@+id/ratingBar"
-            android:rating="0"
-            android:max="5"
-            android:isIndicator="true"
-            android:layout_gravity="center"
-            android:paddingTop="16dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:isIndicator="true"
+            android:max="5"
+            android:paddingTop="16dp"
+            android:rating="0" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/rating_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/white"
+            android:src="@drawable/ic_star_black_24dp"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            app:useCompatPadding="true" />
 
     </LinearLayout>
 

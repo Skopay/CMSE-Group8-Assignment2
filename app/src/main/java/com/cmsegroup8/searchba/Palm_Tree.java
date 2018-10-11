@@ -20,6 +20,7 @@ public class Palm_Tree extends AppCompatActivity {
 
     static String quantity;
     ElegantNumberButton quantityButton;
+    double price = 30.00;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +52,6 @@ public class Palm_Tree extends AppCompatActivity {
         String incominginfo = incomingintent.getStringExtra("Tree_Info");
         info.setText(incominginfp);*/
 
-        feature.setText("Features");
         info.setText("Palms are one of the best known and most widely planted tree families." +
                  "They have held an important role for humans throughout much of history." +
                  "Many common products and foods come from palms." +

@@ -103,7 +103,8 @@
             android:layout_height="wrap_content"
             android:text="Pickup (Free)"
             tools:layout_editor_absoluteX="42dp"
-            tools:layout_editor_absoluteY="123dp" />
+            tools:layout_editor_absoluteY="123dp"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/deliveryRadioButton"
@@ -111,7 +112,8 @@
             android:layout_height="wrap_content"
             android:text="Delivery ($5.00)"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp" />
+            tools:layout_editor_absoluteY="0dp"
+            android:onClick="onRadioButtonClicked"/>
 
     </RadioGroup>
 

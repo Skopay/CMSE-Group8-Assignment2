@@ -37,6 +37,8 @@ public class Delivery extends AppCompatActivity {
         pickupRadioButton = findViewById(R.id.pickupRadioButton);
         pickupRadioButton.setChecked(true);
         deliveryRadioButton = findViewById(R.id.deliveryRadioButton);
+        deliveryRadioButton.setChecked(false);
+
 
         submitButton = findViewById(R.id.submitButton);
         submitButton.setOnClickListener(new View.OnClickListener() {
@@ -55,7 +57,28 @@ public class Delivery extends AppCompatActivity {
 
             }
         });
+
     }
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.pickupRadioButton:
+                if (checked)
+                    Toast.makeText(Delivery.this, "Pickup", Toast.LENGTH_SHORT).show();
+                    break;
+            case R.id.deliveryRadioButton:
+                if (checked)
+                    showAlertDialog();
+                    break;
+        }
+    }
+
+
+
 
     private void showToast(String text){
         Toast.makeText(Delivery.this, text, Toast.LENGTH_SHORT).show();
@@ -78,7 +101,7 @@ public class Delivery extends AppCompatActivity {
         alertDialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(Delivery.this, "Order Placed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Delivery.this, "Address Confirmed", Toast.LENGTH_SHORT).show();
             }
         });
 

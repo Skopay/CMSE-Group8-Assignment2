@@ -74,14 +74,6 @@
                     android:text="Common Name: Palm" />
 
                 <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="131dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView"
-                    android:layout_centerHorizontal="true"
-                    android:text="Family: Arecaceae" />
-
-                <TextView
                     android:id="@+id/info1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -98,6 +90,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="$30.00 Each"
                     android:background="@android:color/background_light"
                     android:layout_marginTop="432dp" />
 
@@ -108,7 +102,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="397dp"
-                    android:text="Features"
+                    android:text="Price"
                     android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
                 <Button
