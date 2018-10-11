@@ -35,7 +35,7 @@ public class SearchFilter extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavView_Bar);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -58,12 +58,12 @@ public class SearchFilter extends AppCompatActivity {
             }
         });
 
-        recyclerView = (RecyclerView)findViewById(R.id.recycler_search);
+        recyclerView = findViewById(R.id.recycler_search);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
 
-        materialSearchBar = (MaterialSearchBar)findViewById(R.id.search_bar);
+        materialSearchBar = findViewById(R.id.search_bar);
         database = new Database(this);
 
         materialSearchBar.setHint("Search");

@@ -21,7 +21,7 @@ class SearchViewHolder extends RecyclerView.ViewHolder{
 
     public SearchViewHolder(View itemView){
         super(itemView);
-        name=(TextView)itemView.findViewById(R.id.name);
+        name= itemView.findViewById(R.id.name);
     }
 }
 

@@ -22,8 +22,8 @@ public class Search extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-        ListView list = (ListView) findViewById(R.id.thelist);
-        EditText editText = (EditText) findViewById(R.id.searchFilter);
+        ListView list = findViewById(R.id.thelist);
+        EditText editText = findViewById(R.id.searchFilter);
 
         final ArrayList<String> trees = new ArrayList<>();
         trees.add("Palm");

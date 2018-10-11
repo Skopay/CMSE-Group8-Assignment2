@@ -33,7 +33,7 @@ public class Palm_Tree extends AppCompatActivity {
 
         Trees trees = new Trees();
 
-        ImageView palmtree = (ImageView) findViewById(R.id.palmtree);
+        ImageView palmtree = findViewById(R.id.palmtree);
 
         int imageResource = getResources().getIdentifier("@drawable/palmtree", null, this.getPackageName());
         palmtree.setImageResource(imageResource);
@@ -44,7 +44,7 @@ public class Palm_Tree extends AppCompatActivity {
         TextView commonname = findViewById(R.id.common_name);
         commonname.setText("Common Name: Palm");
 
-        TextView tree_info = (TextView) findViewById(R.id.Tree_info);
+        TextView tree_info = findViewById(R.id.Tree_info);
         tree_info.setText("Palms are one of the best known and most widely planted tree families." +
                 "They have held an important role for humans throughout much of history." +
                 "Many common products and foods come from palms." +
@@ -52,10 +52,10 @@ public class Palm_Tree extends AppCompatActivity {
                 "In the past palms were symbols of victory, peace, and fertility." +
                 "Today palms are a popular symbol for the tropics and for vacations.");
 
-        TextView price_title = (TextView) findViewById(R.id.Price_Title) ;
+        TextView price_title = findViewById(R.id.Price_Title);
         price_title.setText("Price");
 
-        TextView price = (TextView) findViewById(R.id.Price);
+        TextView price = findViewById(R.id.Price);
         price.setText("$30.00 Each");
 
         quantityButton = findViewById(R.id.quantity_button);
