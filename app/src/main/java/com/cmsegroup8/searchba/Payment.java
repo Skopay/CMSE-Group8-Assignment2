@@ -1,5 +1,6 @@
 package com.cmsegroup8.searchba;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
@@ -27,7 +28,10 @@ public class Payment extends AppCompatActivity {
         cardForm.setPayBtnClickListner(new OnPayBtnClickListner() {
             @Override
             public void onClick(Card card) {
-                Toast.makeText(Payment.this, "Payment Succeessful!", Toast.LENGTH_SHORT).show();
+
+                Toast.makeText(Payment.this, "Payment Successful", Toast.LENGTH_SHORT).show();
+                Intent start_home = new Intent(Payment.this, Home.class);
+                startActivity(start_home);
             }
         });
     }
