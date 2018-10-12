@@ -1,7 +1,8 @@
-package com.cmsegroup8.searchba;
+package com.cmsegroup8.PlantATree;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
@@ -32,10 +33,10 @@ public class Home extends AppCompatActivity implements RatingDialogListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        ImageView deals = findViewById(R.id.dailydeals);
+        ImageView Home_Image = (ImageView) findViewById(R.id.home_image);
+        int imageResource = getResources().getIdentifier("@drawable/butternuttree", null, this.getPackageName());
+        Home_Image.setImageResource(imageResource);
 
-        int imageResource = getResources().getIdentifier("@drawable/dailydeals", null, this.getPackageName());
-        deals.setImageResource(imageResource);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavView_Bar);
 

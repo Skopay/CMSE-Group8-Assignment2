@@ -1,10 +1,11 @@
-package com.cmsegroup8.searchba;
+package com.cmsegroup8.PlantATree;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -14,17 +15,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
-import com.cmsegroup8.searchba.Model.Trees;
+import com.cmsegroup8.PlantATree.Model.Trees;
 
 public class Palm_Tree extends AppCompatActivity {
 
-    static String quantity;
+    String quantity;
     ElegantNumberButton quantityButton;
-    double price = 30.00;
-
-    static String palm = "Palm";
-
-
+    int price = 30;
+    int q;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,31 +43,33 @@ public class Palm_Tree extends AppCompatActivity {
         commonname.setText("Common Name: Palm");
 
         TextView tree_info = findViewById(R.id.Tree_info);
-        tree_info.setText("Palms are one of the best known and most widely planted tree families." +
-                "They have held an important role for humans throughout much of history." +
-                "Many common products and foods come from palms." +
-                "They are often used in parks and gardens that are in areas that do not have heavy frosts." +
-                "In the past palms were symbols of victory, peace, and fertility." +
-                "Today palms are a popular symbol for the tropics and for vacations.");
+        tree_info.setText("Palms are one of the best known and most widely planted tree families." + "They have held an important role for humans throughout much of history." + "Many common products and foods come from palms." + "They are often used in parks and gardens that are in areas that do not have heavy frosts." + "In the past palms were symbols of victory, peace, and fertility." + "Today palms are a popular symbol for the tropics and for vacations.");
 
         TextView price_title = findViewById(R.id.Price_Title);
         price_title.setText("Price");
 
-        TextView price = findViewById(R.id.Price);
+        final TextView price = findViewById(R.id.Price);
         price.setText("$30.00 Each");
 
         quantityButton = findViewById(R.id.quantity_button);
         quantityButton.setOnClickListener(new ElegantNumberButton.OnClickListener() {
             @Override
             public void onClick(View view) {
-                quantity = quantityButton.getNumber();
+
+                try {
+                    quantity = quantityButton.getNumber();
+                    q = Integer.parseInt(quantity);
+                } catch (NumberFormatException nfe) {
+                    Log.d("QUANTITY", "Couldn't do it soz");
+                }
+
             }
         });
 
         Button purch = findViewById(R.id.purchase);
-        purch.setOnClickListener(new View.OnClickListener(){
+        purch.setOnClickListener(new View.OnClickListener() {
 
-            public void onClick(View view){
+            public void onClick(View view) {
 
                 Intent start_delivery = new Intent(Palm_Tree.this, Delivery.class);
                 startActivity(start_delivery);
@@ -119,12 +119,12 @@ public class Palm_Tree extends AppCompatActivity {
 
         int id = item.getItemId();
 
-        if(id == R.id.navigation_Search) {
+        if (id == R.id.navigation_Search) {
             Intent startsearch = new Intent(this, SearchFilter.class);
             startActivity(startsearch);
         }
 
-        if(id == R.id.navigation_home) {
+        if (id == R.id.navigation_home) {
             Intent starttree1 = new Intent(this, Home.class);
             startActivity(starttree1);
         }

@@ -1,4 +1,4 @@
-package com.cmsegroup8.searchba;
+package com.cmsegroup8.PlantATree;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -19,7 +19,6 @@ public class Delivery extends AppCompatActivity {
     Button submitButton;
     RadioGroup radioGroup;
     RadioButton pickupRadioButton, deliveryRadioButton;
-
     EditText firstNameInput;
     EditText lastNameInput;
 
@@ -54,10 +53,8 @@ public class Delivery extends AppCompatActivity {
                     Intent start_purchase = new Intent(Delivery.this, Payment.class);
                     startActivity(start_purchase);
                 }
-
             }
         });
-
     }
 
     public void onRadioButtonClicked(View view) {
@@ -76,9 +73,6 @@ public class Delivery extends AppCompatActivity {
                     break;
         }
     }
-
-
-
 
     private void showToast(String text){
         Toast.makeText(Delivery.this, text, Toast.LENGTH_SHORT).show();

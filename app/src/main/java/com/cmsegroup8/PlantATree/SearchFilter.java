@@ -1,4 +1,4 @@
-package com.cmsegroup8.searchba;
+package com.cmsegroup8.PlantATree;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -13,8 +13,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.cmsegroup8.searchba.Adapter.SearchAdapter;
-import com.cmsegroup8.searchba.Database.Database;
+import com.cmsegroup8.PlantATree.Adapter.SearchAdapter;
+import com.cmsegroup8.PlantATree.Database.Database;
 import com.mancj.materialsearchbar.MaterialSearchBar;
 
 import java.util.ArrayList;

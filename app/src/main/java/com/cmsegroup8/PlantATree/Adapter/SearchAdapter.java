@@ -1,4 +1,4 @@
-package com.cmsegroup8.searchba.Adapter;
+package com.cmsegroup8.PlantATree.Adapter;
 
 
 import android.content.Context;
@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.cmsegroup8.searchba.Model.Trees;
-import com.cmsegroup8.searchba.R;
+import com.cmsegroup8.PlantATree.Model.Trees;
+import com.cmsegroup8.PlantATree.R;
 
 import java.util.List;
 

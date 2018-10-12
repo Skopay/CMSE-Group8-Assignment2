@@ -1,4 +1,4 @@
-package com.cmsegroup8.searchba;
+package com.cmsegroup8.PlantATree;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

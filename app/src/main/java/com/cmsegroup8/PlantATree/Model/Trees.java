@@ -1,4 +1,4 @@
-package com.cmsegroup8.searchba.Model;
+package com.cmsegroup8.PlantATree.Model;
 
 public class Trees {
 

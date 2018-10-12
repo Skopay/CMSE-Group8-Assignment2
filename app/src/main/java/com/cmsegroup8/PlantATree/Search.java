@@ -1,4 +1,4 @@
-package com.cmsegroup8.searchba;
+package com.cmsegroup8.PlantATree;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

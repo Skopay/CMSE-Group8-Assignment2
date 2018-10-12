@@ -1,4 +1,4 @@
-package com.cmsegroup8.searchba;
+package com.cmsegroup8.PlantATree;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,12 +17,16 @@ public class Payment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.payment_form);
 
+
+        Palm_Tree palm_tree = new Palm_Tree();
+        int Final_price = palm_tree.q * palm_tree.price;
+
         CardForm cardForm = findViewById(R.id.cardForm);
         TextView amount = findViewById(R.id.payment_amount);
         Button payButton = findViewById(R.id.btn_pay);
 
         amount.setTextSize(16);
-        amount.setText("$" + Palm_Tree.quantity);
+        amount.setText("$" + palm_tree.quantity);
         payButton.setText("Pay Now");
 
         cardForm.setPayBtnClickListner(new OnPayBtnClickListner() {

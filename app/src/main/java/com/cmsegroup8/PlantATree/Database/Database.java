@@ -1,11 +1,11 @@
-package com.cmsegroup8.searchba.Database;
+package com.cmsegroup8.PlantATree.Database;
 
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 
-import com.cmsegroup8.searchba.Model.Trees;
+import com.cmsegroup8.PlantATree.Model.Trees;
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
 import java.util.ArrayList;

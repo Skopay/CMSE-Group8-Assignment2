@@ -1,4 +1,4 @@
-package com.cmsegroup8.searchba;
+package com.cmsegroup8.PlantATree;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -16,8 +16,14 @@ public class Arborvitae extends AppCompatActivity {
         setContentView(R.layout.activity_arborvitae);
 
         ImageView arbotree = findViewById(R.id.Arbo_tree);
+
+        int imageResource = getResources().getIdentifier("@drawable/arbotree", null, this.getPackageName());
+        arbotree.setImageResource(imageResource);
+
         TextView arboname = findViewById(R.id.common_name);
         TextView arboinfo = findViewById(R.id.arbo_info);
+
+
 
         Button purchase = findViewById(R.id.purchase);
         purchase.setOnClickListener(new View.OnClickListener() {
