@@ -13,7 +13,7 @@
         <activity android:name=".Palm_Tree" android:parentActivityName=".Search"/>
         <activity android:name=".Search" android:parentActivityName=".Home"/>
         <activity android:name=".Payment" android:parentActivityName=".Delivery"/>
-        <activity android:name=".Delivery" />
+        <activity android:name=".Delivery" android:parentActivityName=".Search"/>
         <activity android:name=".Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
