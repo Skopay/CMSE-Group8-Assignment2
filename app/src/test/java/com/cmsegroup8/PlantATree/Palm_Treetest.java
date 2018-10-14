@@ -7,11 +7,13 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 
+import static junit.framework.TestCase.assertNotNull;
+
 public class Palm_Treetest{
 
     @Rule
     public ActivityTestRule<Palm_Tree> mActivityRule = new ActivityTestRule<Palm_Tree>(Palm_Tree.class);
-    private Palm_Tree Ptree = null;
+    private Palm_Tree PTree = null;
 
     @Before
     public void setUp() throws Exception{
@@ -22,7 +24,7 @@ public class Palm_Treetest{
     public void testLaunch(){
 
         View view = Ptree.findViewById(R.id.info);
-        asserNotNull(view);
+        assertNotNull(view);
     }
 
     @After

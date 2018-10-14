@@ -4,15 +4,14 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
-
 import com.cmsegroup8.PlantATree.Model.Trees;
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Database extends SQLiteAssetHelper {
 
+    //sets final variables for the database's name and version, as they will never change
     private static final String DB_NAME = "trees.db";
     private static final int DB_VERSION = 1;
 
@@ -21,7 +20,8 @@ public class Database extends SQLiteAssetHelper {
         super(context, DB_NAME, null, DB_VERSION);
     }
 
-    public List<Trees> getTrees(){
+    //retrieves all trees from the database
+    public List<Trees> getTrees() {
 
         SQLiteDatabase db = getReadableDatabase();
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
@@ -30,10 +30,10 @@ public class Database extends SQLiteAssetHelper {
         String tableName = "trees";
 
         qb.setTables(tableName);
-        Cursor c = qb.query(db,sqlSelect,null, null, null, null, null);
+        Cursor c = qb.query(db, sqlSelect, null, null, null, null, null);
         List<Trees> result = new ArrayList<>();
-        if(c.moveToFirst()){
-            do{
+        if (c.moveToFirst()) {
+            do {
                 Trees trees = new Trees();
                 trees.setId(c.getInt(c.getColumnIndex("id")));
                 trees.setName(c.getString(c.getColumnIndex("name")));
@@ -43,11 +43,12 @@ public class Database extends SQLiteAssetHelper {
                 trees.setTreeSize(c.getString(c.getColumnIndex("size")));
 
                 result.add(trees);
-            }while(c.moveToNext());
+            } while (c.moveToNext());
         }
         return result;
     }
 
+    //retrieves the names from the 
     public List<String> getNames() {
         SQLiteDatabase db = getReadableDatabase();
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
@@ -66,7 +67,7 @@ public class Database extends SQLiteAssetHelper {
         return result;
     }
 
-    public List<Trees> getTreesByName(String name){
+    public List<Trees> getTreesByName(String name) {
         SQLiteDatabase db = getReadableDatabase();
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
 
@@ -74,20 +75,20 @@ public class Database extends SQLiteAssetHelper {
         String tableName = "trees";
 
         qb.setTables(tableName);
-        Cursor c = qb.query(db,sqlSelect,"name LIKE ?", new String[]{"%"+name+"%"}, null, null, null);
+        Cursor c = qb.query(db, sqlSelect, "name LIKE ?", new String[]{"%" + name + "%"}, null, null, null);
         List<Trees> result = new ArrayList<>();
-        if(c.moveToFirst()){
-            do{
+        if (c.moveToFirst()) {
+            do {
                 Trees trees = new Trees();
                 trees.setId(c.getInt(c.getColumnIndex("id")));
                 trees.setName(c.getString(c.getColumnIndex("name")));
 
                 result.add(trees);
-            }while(c.moveToNext());
+            } while (c.moveToNext());
         }
         return result;
     }
-    
+
 }
 
 

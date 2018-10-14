@@ -48,7 +48,7 @@ public class Delivery extends AppCompatActivity {
                 firstName = firstNameInput.getText().toString();
                 lastName = lastNameInput.getText().toString();
 
-                if(firstName.isEmpty() | lastName.isEmpty()) {
+                if (firstName.isEmpty() | lastName.isEmpty()) {
                     showToast("Please enter your name.");
                 } else {
                     Intent start_purchase = new Intent(Delivery.this, Payment.class);
@@ -63,21 +63,21 @@ public class Delivery extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.pickupRadioButton:
                 if (checked)
                     delivery_price = 0;
-                    Toast.makeText(Delivery.this, "Pickup", Toast.LENGTH_SHORT).show();
-                    break;
+                Toast.makeText(Delivery.this, "Pickup", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.deliveryRadioButton:
                 if (checked)
                     delivery_price = 5;
-                    showAlertDialog();
-                    break;
+                showAlertDialog();
+                break;
         }
     }
 
-    private void showToast(String text){
+    private void showToast(String text) {
         Toast.makeText(Delivery.this, text, Toast.LENGTH_SHORT).show();
     }
 

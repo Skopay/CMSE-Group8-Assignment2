@@ -40,17 +40,15 @@ public class Search extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
 
-                if(position == 0) {
+                if (position == 0) {
                     Intent start_palm = new Intent(Search.this, Palm_Tree.class);
                     //starttree.putExtra("Tree_Info", trees.get(parent));
                     startActivity(start_palm);
-                }
-                else if(position == 1) {
+                } else if (position == 1) {
                     Intent start_Arborvitae = new Intent(Search.this, Arborvitae.class);
                     //starttree.putExtra("Tree_Info", trees.get(parent));
                     startActivity(start_Arborvitae);
-                }
-                else if(position == 2) {
+                } else if (position == 2) {
                     Intent start_Butternut = new Intent(Search.this, Butternut_Tree.class);
                     //starttree.putExtra("Tree_Info", trees.get(parent));
                     startActivity(start_Butternut);

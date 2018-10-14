@@ -1,11 +1,8 @@
 package com.cmsegroup8.PlantATree;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -15,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
-import com.cmsegroup8.PlantATree.Model.Trees;
 
 public class Palm_Tree extends AppCompatActivity {
 
@@ -28,7 +24,7 @@ public class Palm_Tree extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tree1);
+        setContentView(R.layout.activity_palm);
 
         purchased = false;
 
@@ -90,7 +86,7 @@ public class Palm_Tree extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.navigation_Search) {
-            Intent startsearch = new Intent(this, SearchFilter.class);
+            Intent startsearch = new Intent(this, Search.class);
             startActivity(startsearch);
         }
 

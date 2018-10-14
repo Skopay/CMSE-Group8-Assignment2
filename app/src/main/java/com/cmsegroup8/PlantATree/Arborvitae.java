@@ -85,7 +85,7 @@ public class Arborvitae extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.navigation_Search) {
-            Intent startsearch = new Intent(this, SearchFilter.class);
+            Intent startsearch = new Intent(this, Search.class);
             startActivity(startsearch);
         }
 

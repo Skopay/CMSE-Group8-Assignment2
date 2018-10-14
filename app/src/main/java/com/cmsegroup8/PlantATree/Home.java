@@ -1,26 +1,22 @@
 package com.cmsegroup8.PlantATree;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.Toast;
+
 import com.stepstone.apprating.AppRatingDialog;
 import com.stepstone.apprating.listener.RatingDialogListener;
+
 import java.util.Arrays;
 
 public class Home extends AppCompatActivity implements RatingDialogListener {
@@ -44,19 +40,19 @@ public class Home extends AppCompatActivity implements RatingDialogListener {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
-                switch (menuItem.getItemId()){
+                switch (menuItem.getItemId()) {
 
-                case R.id.navigation_home:
-                    Intent home = new Intent(Home.this, Home.class);
-                    startActivity(home);
-                    break;
+                    case R.id.navigation_home:
+                        Intent home = new Intent(Home.this, Home.class);
+                        startActivity(home);
+                        break;
 
-                case R.id.navigation_Search:
-                    Intent search = new Intent(Home.this, Search.class);
-                    startActivity(search);
-                    break;
+                    case R.id.navigation_Search:
+                        Intent search = new Intent(Home.this, Search.class);
+                        startActivity(search);
+                        break;
 
-            }
+                }
                 return false;
             }
         });
