@@ -24,6 +24,7 @@ public class Home extends AppCompatActivity implements RatingDialogListener {
     FloatingActionButton ratingButton;
     RatingBar ratingBar;
 
+    //Creates Home and Search button, images, and rating bar
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +69,7 @@ public class Home extends AppCompatActivity implements RatingDialogListener {
         });
     }
 
+    //Creates the pop-up options menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -75,7 +77,7 @@ public class Home extends AppCompatActivity implements RatingDialogListener {
         return true;
     }
 
-
+    //Sets settings for pop-up rating menu
     private void showRatingDialog() {
         new AppRatingDialog.Builder()
                 .setPositiveButtonText("Submit")
@@ -95,13 +97,14 @@ public class Home extends AppCompatActivity implements RatingDialogListener {
                 .show();
     }
 
+    //Sets what is to happen when the "Submit" button is clicked within the rating menu
     public void onPositiveButtonClicked(int rating, String comments) {
         ratingBar.setRating(rating);
         Toast.makeText(Home.this, "Thank you for the feedback!", Toast.LENGTH_SHORT).show();
     }
 
     public void onNegativeButtonClicked() {
-        //Nothing is done
+        //simply returns
     }
 
 }

@@ -15,6 +15,7 @@ public class Payment extends AppCompatActivity {
 
     int tree_price;
 
+    //Sets the total price for the requested number of trees
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +51,7 @@ public class Payment extends AppCompatActivity {
 
         }
 
+        //Creates the Payment form
         CardForm cardForm = findViewById(R.id.cardForm);
         TextView amount = findViewById(R.id.payment_amount);
         Button payButton = findViewById(R.id.btn_pay);
@@ -58,6 +60,7 @@ public class Payment extends AppCompatActivity {
         amount.setText("$" + tree_price);
         payButton.setText("Pay Now");
 
+        //Sets what is to occur upon clicking the payment button
         cardForm.setPayBtnClickListner(new OnPayBtnClickListner() {
             @Override
             public void onClick(Card card) {

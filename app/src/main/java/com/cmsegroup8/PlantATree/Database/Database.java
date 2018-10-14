@@ -48,7 +48,7 @@ public class Database extends SQLiteAssetHelper {
         return result;
     }
 
-    //retrieves the names from the 
+    //retrieves the names from the database to use in the suggestion list
     public List<String> getNames() {
         SQLiteDatabase db = getReadableDatabase();
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
@@ -67,7 +67,8 @@ public class Database extends SQLiteAssetHelper {
         return result;
     }
 
-    public List<Trees> getTreesByName(String name) {
+    //retrieves the names from the database to show in the search field based on what the user has typed
+       public List<Trees> getTreesByName(String name) {
         SQLiteDatabase db = getReadableDatabase();
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
 
