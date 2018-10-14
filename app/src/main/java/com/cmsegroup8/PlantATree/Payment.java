@@ -25,19 +25,19 @@ public class Payment extends AppCompatActivity {
          * depending on the tree selected for purchase the selected trees boolean variable
          * purchased will be set to false and int variable q to 0*/
 
-        if (Palm_Tree.purchased == true && Arborvitae.purchased == false && Butternut_Tree.purchased == false) {
+        if (Palm_Tree.purchased && !Arborvitae.purchased && !Butternut_Tree.purchased) {
 
             tree_price = (Palm_Tree.q * Palm_Tree.price) + Delivery.delivery_price;
             Palm_Tree.purchased = false;
             Palm_Tree.q = 0;
 
-        } else if (Arborvitae.purchased == true && Palm_Tree.purchased == false && Butternut_Tree.purchased == false) {
+        } else if (Arborvitae.purchased && !Palm_Tree.purchased && !Butternut_Tree.purchased) {
 
             tree_price = (Arborvitae.q * Arborvitae.price) + Delivery.delivery_price;
             Arborvitae.purchased = false;
             Arborvitae.q = 0;
 
-        } else if (Butternut_Tree.purchased == true && Palm_Tree.purchased == false && Arborvitae.purchased == false) {
+        } else if (Butternut_Tree.purchased && !Palm_Tree.purchased && !Arborvitae.purchased) {
 
             tree_price = (Butternut_Tree.q * Butternut_Tree.price) + Delivery.delivery_price;
             Butternut_Tree.purchased = false;

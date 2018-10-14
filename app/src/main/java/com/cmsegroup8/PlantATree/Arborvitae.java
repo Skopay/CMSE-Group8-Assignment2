@@ -29,34 +29,34 @@ public class Arborvitae extends AppCompatActivity {
         //sets boolean purchased to false
         purchased = false;
 
-        /*defines imageveiw arbotree and links the veiw Arbo_tree
-         * sets image veiw arbotree to have the image arbotree.jpg.jpg*/
+        /*defines imageview arbotree and links the view Arbo_tree
+         * sets image view arbotree to have the image arbotree.jpg.jpg*/
         ImageView arbotree = findViewById(R.id.Arbo_tree);
         int imageResource = getResources().getIdentifier("@drawable/arbortree", null, this.getPackageName());
         arbotree.setImageResource(imageResource);
 
-        //defines textveiw and sets the text value
+        //defines textview and sets the text value
         TextView facts = findViewById(R.id.Facts);
         facts.setText("Facts");
 
-        //defines textveiw and sets the text value
+        //defines textview and sets the text value
         TextView commonname = findViewById(R.id.common_name);
         commonname.setText("Common Name: Arborvitae");
 
-        //defines textveiw and sets the text value
+        //defines textview and sets the text value
         TextView tree_info = findViewById(R.id.Tree_info);
         tree_info.setText("Arborvitae is a medium sized, slow growing, forest tree. The wood is light, soft, brittle, coarse grained, light yellowish and brown in colour, and is durable in contact with soil. Used in small poles and fence posts.");
 
-        //defines textveiw and sets the text value
+        //defines textview and sets the text value
         TextView price_title = findViewById(R.id.Price_Title);
         price_title.setText("Price");
 
-        //defines textveiw and sets the text value
+        //defines textview and sets the text value
         final TextView price = findViewById(R.id.Price);
         price.setText("$25.00 Each");
 
-        /*defines imageveiw palmtree and links the veiw palmtree
-         * sets image veiw palm tree to have the image palmtree.jpg*/
+        /*defines imageview palmtree and links the view palmtree
+         * sets image view palm tree to have the image palmtree.jpg*/
         quantityButton = findViewById(R.id.quantity_button);
         quantityButton.setOnClickListener(new ElegantNumberButton.OnClickListener() {
             @Override
@@ -68,7 +68,7 @@ public class Arborvitae extends AppCompatActivity {
             }
         });
 
-        /*Defines the button and links with the veiw purchase
+        /*Defines the button and links with the view purchase
          * once the button is clicked boolean purchased is set to true
          * and the user is directed to the delivery activity*/
         Button purch = findViewById(R.id.purchase);

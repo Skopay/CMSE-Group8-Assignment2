@@ -22,7 +22,8 @@
             android:layout_height="248dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            app:srcCompat="@color/btn_color" />
+            app:srcCompat="@color/btn_color"
+            android:contentDescription="TODO" />
 
         <TextView
             android:id="@+id/rate_label"
@@ -84,6 +85,6 @@
         android:layout_alignParentStart="true"
         app:itemIconTint="#6f9b41"
         app:itemTextColor="#6f9b41"
-        app:menu="@menu/navigation"></android.support.design.widget.BottomNavigationView>
+        app:menu="@menu/navigation" />
 
 </RelativeLayout>

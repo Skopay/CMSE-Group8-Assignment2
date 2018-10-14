@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Search extends AppCompatActivity {
 
@@ -23,9 +24,9 @@ public class Search extends AppCompatActivity {
         setContentView(R.layout.activity_search);
 
         //Declares back item in top action bar
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
-        //Defines listveiw list
+        //Defines listview list
         ListView list = findViewById(R.id.thelist);
 
         //Defines edittext edittext
@@ -37,11 +38,11 @@ public class Search extends AppCompatActivity {
         trees.add("Arborvitae");
         trees.add("Butternut");
 
-        //defines ArrayAdapter adapter and sets adapater
+        //defines ArrayAdapter adapter and sets adapter
         adapter = new ArrayAdapter(this, R.layout.list_layout, trees);
         list.setAdapter(adapter);
 
-        /*Depending on what item is clciked the user is redirected to the specified activity*/
+        /*Depending on what item is clicked the user is redirected to the specified activity*/
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -62,7 +63,7 @@ public class Search extends AppCompatActivity {
             }
         });
 
-        /*This method filters the listveiw so that the listveiw item displayed
+        /*This method filters the listview so that the listview item displayed
          * matches the string in the edit text field*/
         editText.addTextChangedListener(new TextWatcher() {
             @Override

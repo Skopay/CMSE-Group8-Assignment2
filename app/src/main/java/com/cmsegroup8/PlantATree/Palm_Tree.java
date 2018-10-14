@@ -30,33 +30,33 @@ public class Palm_Tree extends AppCompatActivity {
         //Sets variable purchased to false
         purchased = false;
 
-        /*defines imageveiw palmtree and links the veiw palmtree
-         * sets image veiw palm tree to have the image palmtree.jpg*/
+        /*defines imageview palmtree and links the view palmtree
+         * sets image view palm tree to have the image palmtree.jpg*/
         ImageView palmtree = findViewById(R.id.palmtree);
         int imageResource = getResources().getIdentifier("@drawable/palmtree", null, this.getPackageName());
         palmtree.setImageResource(imageResource);
 
-        //defines textveiw and sets the text value
+        //defines textview and sets the text value
         TextView facts = findViewById(R.id.Facts);
         facts.setText("Facts");
 
-        //defines textveiw facts and sets the text value
+        //defines textview facts and sets the text value
         TextView commonname = findViewById(R.id.common_name);
         commonname.setText("Common Name: Palm");
 
-        //defines textveiw facts and sets the text value
+        //defines textview facts and sets the text value
         TextView tree_info = findViewById(R.id.Tree_info);
         tree_info.setText("Palms are one of the best known and most widely planted tree families." + "They have held an important role for humans throughout much of history." + "Many common products and foods come from palms." + "They are often used in parks and gardens that are in areas that do not have heavy frosts." + "In the past palms were symbols of victory, peace, and fertility." + "Today palms are a popular symbol for the tropics and for vacations.");
 
-        //defines textveiw facts and sets the text value
+        //defines textview facts and sets the text value
         TextView price_title = findViewById(R.id.Price_Title);
         price_title.setText("Price");
 
-        //defines textveiw facts and sets the text value
+        //defines textview facts and sets the text value
         final TextView price = findViewById(R.id.Price);
         price.setText("$30.00 Each");
 
-        /*Defines the ElegantnumberButton and links to the veiw quantity_button*/
+        /*Defines the ElegantnumberButton and links to the view quantity_button*/
         quantityButton = findViewById(R.id.quantity_button);
         quantityButton.setOnClickListener(new ElegantNumberButton.OnClickListener() {
             @Override
@@ -68,7 +68,7 @@ public class Palm_Tree extends AppCompatActivity {
             }
         });
 
-        /*Defines the button and links with the veiw purchase
+        /*Defines the button and links with the view purchase
          * once the button is clicked boolean purchased is set to true
          * and the user is directed to the delivery activity*/
         Button purch = findViewById(R.id.purchase);

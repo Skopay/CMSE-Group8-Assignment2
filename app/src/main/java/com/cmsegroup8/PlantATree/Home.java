@@ -30,9 +30,9 @@ public class Home extends AppCompatActivity implements RatingDialogListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        /*defines imageveiw Home_Image and links the veiw home_image
-         * sets image veiw Home_Image to have the image butternuttree.jpg*/
-        ImageView Home_Image = (ImageView) findViewById(R.id.home_image);
+        /*defines imageview Home_Image and links the view home_image
+         * sets image view Home_Image to have the image butternuttree.jpg*/
+        ImageView Home_Image = findViewById(R.id.home_image);
         int imageResource = getResources().getIdentifier("@drawable/butternuttree", null, this.getPackageName());
         Home_Image.setImageResource(imageResource);
 
@@ -79,7 +79,7 @@ public class Home extends AppCompatActivity implements RatingDialogListener {
     }
 
     //Sets what is to happen when the "Submit" button is clicked within the rating menu
-    public void onPositiveButtonClicked(int rating, String comments) {
+    public void onPositiveButtonClicked(int rating, @NonNull String comments) {
         ratingBar.setRating(rating);
         Toast.makeText(Home.this, "Thank you for the feedback!", Toast.LENGTH_SHORT).show();
     }

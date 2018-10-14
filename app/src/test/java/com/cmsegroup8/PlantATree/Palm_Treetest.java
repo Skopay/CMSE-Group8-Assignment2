@@ -12,25 +12,25 @@ import static junit.framework.TestCase.assertNotNull;
 public class Palm_Treetest{
 
     @Rule
-    public ActivityTestRule<Palm_Tree> mActivityRule = new ActivityTestRule<Palm_Tree>(Palm_Tree.class);
-    private Palm_Tree PTree = null;
+    public ActivityTestRule<Palm_Tree> mActivityRule = new ActivityTestRule<>(Palm_Tree.class);
+    private Palm_Tree pTree = null;
 
     @Before
-    public void setUp() throws Exception{
-        Ptree = mActivityRule.getActivity();
+    public void setUp() {
+        pTree = mActivityRule.getActivity();
     }
 
     @Test
     public void testLaunch(){
 
-        View view = Ptree.findViewById(R.id.info);
+        View view = pTree.findViewById(R.id.info);
         assertNotNull(view);
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
 
-        Ptree = null;
+        pTree = null;
 
     }
 }
