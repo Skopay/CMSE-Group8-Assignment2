@@ -9,10 +9,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:scrollbarStyle="insideOverlay"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +26,7 @@
             <RelativeLayout
                 android:id="@+id/relativeLayout"
                 android:layout_width="match_parent"
-                android:layout_height="900dp"
+                android:layout_height="700dp"
                 android:visibility="visible"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="259dp">
@@ -53,9 +51,9 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="225dp"
-                    android:textColor="#6f9b41"
                     android:text="Facts"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="#6f9b41" />
 
                 <TextView
                     android:id="@+id/common_name"
@@ -64,8 +62,8 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="260dp"
-                    android:textColor="#6f9b41"
-                    android:text="Common Name: Palm" />
+                    android:text="Common Name: Palm"
+                    android:textColor="#6f9b41" />
 
                 <TextView
                     android:id="@+id/Tree_info"
@@ -87,8 +85,8 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="-453dp"
                     android:text="Price"
-                    android:textColor="#6f9b41"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="#6f9b41" />
 
                 <TextView
                     android:id="@+id/Price"
@@ -99,8 +97,9 @@
                     android:layout_marginTop="453dp"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:textColor="#6f9b41"
-                    android:text="$30.00 Each" />
+                    android:text="$30.00 Each"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="#6f9b41" />
 
                 <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
                     android:id="@+id/quantity_button"
@@ -119,8 +118,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="371dp"
-                    android:layout_toEndOf="@+id/Price_Title"
+                    android:layout_marginBottom="140dp"
+                    android:layout_toEndOf="@+id/Facts"
                     android:text="Purchase" />
 
             </RelativeLayout>

@@ -65,13 +65,11 @@ public class Delivery extends AppCompatActivity {
         // Check which radio button was clicked
         switch (view.getId()) {
             case R.id.pickupRadioButton:
-                if (checked)
-                    delivery_price = 0;
+                if (checked) delivery_price = 0;
                 Toast.makeText(Delivery.this, "Pickup", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.deliveryRadioButton:
-                if (checked)
-                    delivery_price = 5;
+                if (checked) delivery_price = 5;
                 showAlertDialog();
                 break;
         }
@@ -87,9 +85,7 @@ public class Delivery extends AppCompatActivity {
         alertDialog.setMessage("Enter your address: ");
 
         final EditText editAddress = new EditText(Delivery.this);
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams
-                (LinearLayout.LayoutParams.MATCH_PARENT,
-                        LinearLayout.LayoutParams.MATCH_PARENT);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 
         editAddress.setLayoutParams(lp);
         alertDialog.setView(editAddress);

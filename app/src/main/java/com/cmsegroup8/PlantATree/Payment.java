@@ -21,33 +21,27 @@ public class Payment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.payment_form);
 
+        /*Sets the value of tree_price based on the conditions met below
+         * depending on the tree selected for purchase the selected trees boolean variable
+         * purchased will be set to false and int variable q to 0*/
+
         if (Palm_Tree.purchased == true && Arborvitae.purchased == false && Butternut_Tree.purchased == false) {
 
             tree_price = (Palm_Tree.q * Palm_Tree.price) + Delivery.delivery_price;
-
-        } else if (Palm_Tree.purchased == true && Arborvitae.purchased == true && Butternut_Tree.purchased == false) {
-
-            tree_price = (Palm_Tree.q * Palm_Tree.price) + (Arborvitae.q + Arborvitae.price) + Delivery.delivery_price;
-
-        } else if (Palm_Tree.purchased == true && Arborvitae.purchased == true && Butternut_Tree.purchased == true) {
-
-            tree_price = (Palm_Tree.q * Palm_Tree.price) + (Arborvitae.q + Arborvitae.price) + (Butternut_Tree.q + Butternut_Tree.price) + Delivery.delivery_price;
+            Palm_Tree.purchased = false;
+            Palm_Tree.q = 0;
 
         } else if (Arborvitae.purchased == true && Palm_Tree.purchased == false && Butternut_Tree.purchased == false) {
 
-            tree_price = (Arborvitae.q + Arborvitae.price) + Delivery.delivery_price;
+            tree_price = (Arborvitae.q * Arborvitae.price) + Delivery.delivery_price;
+            Arborvitae.purchased = false;
+            Arborvitae.q = 0;
 
-        } else if (Palm_Tree.purchased == true && Arborvitae.purchased == true && Butternut_Tree.purchased == false) {
+        } else if (Butternut_Tree.purchased == true && Palm_Tree.purchased == false && Arborvitae.purchased == false) {
 
-            tree_price = (Palm_Tree.q * Palm_Tree.price) + (Arborvitae.q + Arborvitae.price) + Delivery.delivery_price;
-
-        } else if (Palm_Tree.purchased == false && Arborvitae.purchased == false && Butternut_Tree.purchased == true) {
-
-            tree_price = (Butternut_Tree.q + Butternut_Tree.price) + Delivery.delivery_price;
-
-        } else if (Palm_Tree.purchased == true && Arborvitae.purchased == false && Butternut_Tree.purchased == true) {
-
-            tree_price = (Palm_Tree.q * Palm_Tree.price) + (Butternut_Tree.q + Butternut_Tree.price) + Delivery.delivery_price;
+            tree_price = (Butternut_Tree.q * Butternut_Tree.price) + Delivery.delivery_price;
+            Butternut_Tree.purchased = false;
+            Butternut_Tree.q = 0;
 
         }
 

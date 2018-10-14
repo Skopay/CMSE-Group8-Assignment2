@@ -30,13 +30,17 @@ public class Home extends AppCompatActivity implements RatingDialogListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        /*defines imageveiw Home_Image and links the veiw home_image
+         * sets image veiw Home_Image to have the image butternuttree.jpg*/
         ImageView Home_Image = (ImageView) findViewById(R.id.home_image);
         int imageResource = getResources().getIdentifier("@drawable/butternuttree", null, this.getPackageName());
         Home_Image.setImageResource(imageResource);
 
-
+        //Defines the BottomNavigationView
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavView_Bar);
 
+        /*Once an item on the bottomNavigationView is clicked depending
+         * on the item clicked directs the user to the corresponding activity*/
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -69,32 +73,9 @@ public class Home extends AppCompatActivity implements RatingDialogListener {
         });
     }
 
-    //Creates the pop-up options menu
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.misc, menu);
-        return true;
-    }
-
     //Sets settings for pop-up rating menu
     private void showRatingDialog() {
-        new AppRatingDialog.Builder()
-                .setPositiveButtonText("Submit")
-                .setNegativeButtonText("Cancel")
-                .setNoteDescriptions(Arrays.asList("Very Bad", "Not Good", "Average", "Good", "Great"))
-                .setDefaultRating(1)
-                .setTitle("Rate your experience")
-                .setDescription("Give us feedback about your experience with PlantATree")
-                .setTitleTextColor(R.color.colorPrimary)
-                .setDescriptionTextColor(R.color.colorPrimary)
-                .setHint("Write your comments here...")
-                .setHintTextColor(R.color.white)
-                .setCommentTextColor(android.R.color.white)
-                .setCommentBackgroundColor(android.R.color.black)
-                .setWindowAnimation(R.style.RatingDialogFadeAnim)
-                .create(Home.this)
-                .show();
+        new AppRatingDialog.Builder().setPositiveButtonText("Submit").setNegativeButtonText("Cancel").setNoteDescriptions(Arrays.asList("Very Bad", "Not Good", "Average", "Good", "Great")).setDefaultRating(1).setTitle("Rate your experience").setDescription("Give us feedback about your experience with PlantATree").setTitleTextColor(R.color.colorPrimary).setDescriptionTextColor(R.color.colorPrimary).setHint("Write your comments here...").setHintTextColor(R.color.white).setCommentTextColor(android.R.color.white).setCommentBackgroundColor(android.R.color.black).setWindowAnimation(R.style.RatingDialogFadeAnim).create(Home.this).show();
     }
 
     //Sets what is to happen when the "Submit" button is clicked within the rating menu
