@@ -21,6 +21,7 @@ public class Delivery extends AppCompatActivity {
     RadioButton pickupRadioButton, deliveryRadioButton;
     EditText firstNameInput;
     EditText lastNameInput;
+    static int delivery_price;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,10 +66,12 @@ public class Delivery extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.pickupRadioButton:
                 if (checked)
+                    delivery_price = 0;
                     Toast.makeText(Delivery.this, "Pickup", Toast.LENGTH_SHORT).show();
                     break;
             case R.id.deliveryRadioButton:
                 if (checked)
+                    delivery_price = 5;
                     showAlertDialog();
                     break;
         }

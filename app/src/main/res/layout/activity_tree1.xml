@@ -28,7 +28,7 @@
             <RelativeLayout
                 android:id="@+id/relativeLayout"
                 android:layout_width="match_parent"
-                android:layout_height="1503dp"
+                android:layout_height="900dp"
                 android:visibility="visible"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="259dp">
@@ -36,7 +36,7 @@
                 <ImageView
                     android:id="@+id/palmtree"
                     android:layout_width="match_parent"
-                    android:layout_height="175dp"
+                    android:layout_height="216dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:scaleType="fitXY"
@@ -52,7 +52,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="177dp"
+                    android:layout_marginTop="225dp"
+                    android:textColor="#6f9b41"
                     android:text="Facts"
                     android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
@@ -62,17 +63,19 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="213dp"
+                    android:layout_marginTop="260dp"
+                    android:textColor="#6f9b41"
                     android:text="Common Name: Palm" />
 
                 <TextView
                     android:id="@+id/Tree_info"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="261dp"
+                    android:layout_marginTop="287dp"
                     android:background="@android:color/background_light"
+                    android:textColor="#6f9b41"
                     tools:layout_editor_absoluteX="0dp"
                     tools:layout_editor_absoluteY="308dp" />
 
@@ -80,31 +83,34 @@
                     android:id="@+id/Price_Title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
+                    android:layout_above="@+id/Price"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="402dp"
-                    android:text="Price" />
+                    android:layout_marginBottom="-453dp"
+                    android:text="Price"
+                    android:textColor="#6f9b41"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
                 <TextView
                     android:id="@+id/Price"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:gravity="center"
-                    android:text="$30.00 Each"
+                    android:layout_marginTop="453dp"
                     android:background="@android:color/background_light"
-                    android:layout_marginTop="432dp" />
+                    android:gravity="center"
+                    android:textColor="#6f9b41"
+                    android:text="$30.00 Each" />
 
                 <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
                     android:id="@+id/quantity_button"
-                    android:layout_width="90dp"
+                    android:layout_width="86dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
                     android:layout_alignTop="@+id/purchase"
-                    android:layout_marginStart="95dp"
+                    android:layout_toStartOf="@+id/Facts"
+                    android:visibility="visible"
                     app:finalNumber="50"
-                    app:initialNumber="1">
+                    app:initialNumber="0">
 
                 </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
 
@@ -112,8 +118,8 @@
                     android:id="@+id/purchase"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginTop="481dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="371dp"
                     android:layout_toEndOf="@+id/Price_Title"
                     android:text="Purchase" />
 

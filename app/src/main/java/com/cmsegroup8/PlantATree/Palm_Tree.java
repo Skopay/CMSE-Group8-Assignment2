@@ -19,20 +19,20 @@ import com.cmsegroup8.PlantATree.Model.Trees;
 
 public class Palm_Tree extends AppCompatActivity {
 
-    String quantity;
+    static String quantity;
     ElegantNumberButton quantityButton;
-    int price = 30;
-    int q;
+    static int q = 0;
+    static int price = 30;
+    static boolean purchased;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tree1);
 
-        Trees trees = new Trees();
+        purchased = false;
 
         ImageView palmtree = findViewById(R.id.palmtree);
-
         int imageResource = getResources().getIdentifier("@drawable/palmtree", null, this.getPackageName());
         palmtree.setImageResource(imageResource);
 
@@ -56,12 +56,8 @@ public class Palm_Tree extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                try {
                     quantity = quantityButton.getNumber();
                     q = Integer.parseInt(quantity);
-                } catch (NumberFormatException nfe) {
-                    Log.d("QUANTITY", "Couldn't do it soz");
-                }
 
             }
         });
@@ -71,38 +67,12 @@ public class Palm_Tree extends AppCompatActivity {
 
             public void onClick(View view) {
 
+                purchased = true;
                 Intent start_delivery = new Intent(Palm_Tree.this, Delivery.class);
                 startActivity(start_delivery);
             }
         });
 
-        /*Intent incomingintent = getIntent();
-        String incominginfo = incomingintent.getStringExtra("Tree_Info");
-        info.setText(incominginfo);*/
-
-        //BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
-
-        /*bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-
-                switch (menuItem.getItemId()){
-
-                    case R.id.navigation_home:
-                        Intent home = new Intent(Palm_Tree.this, Home.class);
-                        startActivity(home);
-                        break;
-
-                    case R.id.navigation_Search:
-                        Intent search = new Intent(Palm_Tree.this, SearchFilter.class);
-                        startActivity(search);
-                        break;
-
-                }
-                return false;
-            }
-        });
-*/
     }
 
 

@@ -22,6 +22,8 @@ public class Search extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         ListView list = findViewById(R.id.thelist);
         EditText editText = findViewById(R.id.searchFilter);
 
