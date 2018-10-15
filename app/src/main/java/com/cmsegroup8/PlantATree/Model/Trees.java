@@ -2,6 +2,7 @@ package com.cmsegroup8.PlantATree.Model;
 
 public class Trees {
 
+    //Variables which define the tree
     public int id;
     public String name;
     public String price;
@@ -9,7 +10,7 @@ public class Trees {
     public String colour;
     public String treeSize;
 
-
+    //Constructor to create a defined tree
     public Trees(int id, String name, String price, String desc, String colour, String treeSize) {
         this.id = id;
         this.name = name;
@@ -28,7 +29,7 @@ public class Trees {
     public Trees() {
     }
 
-
+    //Setters and getters for each variable
     public String getPrice() {
         return price;
     }

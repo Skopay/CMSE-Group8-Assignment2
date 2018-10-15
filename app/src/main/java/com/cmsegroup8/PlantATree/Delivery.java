@@ -48,6 +48,7 @@ public class Delivery extends AppCompatActivity {
                 firstName = firstNameInput.getText().toString();
                 lastName = lastNameInput.getText().toString();
 
+                //Checks if user has entered their name
                 if (firstName.isEmpty() | lastName.isEmpty()) {
                     showToast("Please enter your name.");
                 } else {
@@ -75,10 +76,12 @@ public class Delivery extends AppCompatActivity {
         }
     }
 
+    //Displays notification to user
     private void showToast(String text) {
         Toast.makeText(Delivery.this, text, Toast.LENGTH_SHORT).show();
     }
 
+    //Displays alert so user can enter their address
     private void showAlertDialog() {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(Delivery.this);
         alertDialog.setTitle("One more step!");
